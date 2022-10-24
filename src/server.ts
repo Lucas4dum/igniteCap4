@@ -1,7 +1,14 @@
+import "reflect-metadata";
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
+
 import swaggerFile from './swagger.json';
-import { router } from './routes';
+
+import { createConnection } from "./database";
+
+createConnection();
+
+import { router } from './routes'
 
 const app = express();
 
@@ -11,4 +18,4 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.use(router);
 
-app.listen(3333, () => console.log("Server is running"));
+app.listen(3333, () => console.log("Server is running in port 3333"));
