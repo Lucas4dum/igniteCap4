@@ -6,6 +6,8 @@ import swaggerFile from './swagger.json';
 
 import { createConnection } from "./database";
 
+import "./shared/container";
+
 createConnection();
 
 import { router } from './routes'
