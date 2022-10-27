@@ -1,4 +1,4 @@
-# igniteCap2
+# igniteCap3
 
 - rodar migration typeorm atualizado ["yarn typeorm migration:generate ./src/database/migrations/CreateCategories"]
 - criar dados yarn typeorm migration:run 
